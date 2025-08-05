@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug run_sdad_fixed_shapley.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/experiments/temperature_tuning/run_sdad_fixed_shapley.py",
+      "console": "integratedTerminal",
+      "python": "/home/ly/miniconda3/envs/data-distill/bin/python",
+      "args": [
+        "--model_repo", "Qwen/Qwen2.5-Math-1.5B-Instruct",
+        "--data_path", "data/math/test.jsonl",
+        "--input_start", "0",
+        "--input_end", "500",
+        "--shy_threshold", "0.85",
+        "--num_branches", "12",
+        "--branch_length", "60",
+        "--max_depth", "2",
+        "--num_select", "8",
+        "--max_candidates", "8",
+        "--branch_temperature", "0.7",
+        "--output_dir", "results/sdad_bestofn_comparison/Qwen/Qwen2.5-Math-1.5B-Instruct/math",
+        "--run_name", "sdad_math500",
+        "--auto_discover_shapley"
+      ],
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "0"
+      }
+    }
+  ]
+}

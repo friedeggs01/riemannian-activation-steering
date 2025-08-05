@@ -1,4 +1,4 @@
-name: data-distill
+name: rie-activation
 channels:
   - pytorch
   - nvidia
